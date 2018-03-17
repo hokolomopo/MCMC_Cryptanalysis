@@ -1,0 +1,134 @@
+\documentclass[11pt]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{color}
+\usepackage{subfigure}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{threeparttable}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{lmodern} % police Latin Modern
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{listingsutf8}
+\usepackage{verbatim}
+\usepackage[autolanguage]{numprint}
+\usepackage{rotating}
+\usepackage[top=3cm, bottom=3cm, left=3cm, right=3cm]{geometry}
+\pagestyle{fancy}
+\addto\captionsfrench{\def\tablename{Tableau}}
+\lhead{Stegen Thomas s...... \quad  Adrien Minne s154340 \quad  Delaunoy Arnaud s153059}
+\hypersetup{                    % parametrage des hyperliens
+    colorlinks=true,                % colorise les liens
+    breaklinks=true,                % permet les retours à la ligne pour les liens trop longs
+    urlcolor= black,                 % couleur des hyperliens
+    linkcolor= black,                % couleur des liens internes aux documents (index, figures, tableaux, equations,...)
+    citecolor= green                % couleur des liens vers les references bibliographiques
+    }
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+\title{Processus stochastiques: cryptanalyse}
+\author{Stegen Thomas s...... \\ Adrien Minne s154340 \\ Delaunoy Arnaud s153059}
+\date{}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\arabic{section}.\arabic{subsection}}
+\renewcommand\thesubsubsection{Question \arabic{subsubsection}}
+\begin{document}
+\setcounter{secnumdepth}{3}
+\lstset{
+language=matlab,
+keywordstyle=\color{blue},
+morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+identifierstyle=\color{black},
+stringstyle=\color{mylilas},
+commentstyle=\color{mygreen},
+numberstyle={\tiny \color{black}},
+emph=[1]{for,end,break},emphstyle=[1]\color{blue},
+}
+ \lstset{%
+            inputencoding=utf8,
+                breaklines=true,
+                extendedchars=true,
+                literate=%
+                {é}{{\'e}}{1}%
+                {è}{{\`e}}{1}%
+                {à}{{\`a}}{1}%
+                {ç}{{\c{c}}}{1}%
+                {œ}{{\oe}}{1}%
+                {ù}{{\`u}}{1}%
+                {É}{{\'E}}{1}%
+                {È}{{\`E}}{1}%
+                {À}{{\`A}}{1}%
+                {Ç}{{\c{C}}}{1}%
+                {Œ}{{\OE}}{1}%
+                {Ê}{{\^E}}{1}%
+                {ê}{{\^e}}{1}%
+                {î}{{\^i}}{1}%
+                {ô}{{\^o}}{1}%
+                {û}{{\^u}}{1}%
+                {ë}{{\¨{e}}}1
+                {û}{{\^{u}}}1
+                {â}{{\^{a}}}1
+                {Â}{{\^{A}}}1
+                {Î}{{\^{I}}}1
+        }
+
+\begin{titlepage}
+\maketitle
+\end{titlepage}
+\section{ Première partie : chaines de Markov pour la modélisation du langage et MCMC}
+\subsection{Chaine de Markov pour la modélisation du langage}
+\subsubsection{}
+L'élément (i,j) de la matrice de transition correspond à la probabilité de passer de l'état i à l'état j. Il correspond donc à la probabilité que la lettre i soit suivie de la lettre j dans la séquence. Dès lors, soit $\theta$ l'élément (i,j) de la matrice de transition, $\theta$ est le paramètre d'une loi de Bernouilli avec comme possibilités:
+\begin{itemize}
+\item l'élément i est suivi de j (avec une probabilité $\theta$)
+\item l'élément i n'est pas suivi de j (avec une probabilité $1-\theta$)
+\end{itemize}
+\paragraph{}
+La méthode du maximum de vraisemblance consiste à maximiser $P(\bf{D}_n|\theta)$ avec $\bf{D}_n$ l'échantillon de donnée, ici seq1 et n le nombre de données. Pour une variable de Bernouilli, on a: Soit,\\ 
+$$
+\mbox{} x_i = \left\{
+    \begin{array}{ll}
+        1 & \mbox{si i est suivi de j} \\
+        0 & \mbox{si i n'est pas suivi de j}
+    \end{array}
+\right.
+$$
+et m le nombre d’occurrences de la lettre i.
+\begin{align*}
+P(\bf{D}_n|\theta) &= \prod_{i = 1}^{m} (x_i \theta +(1-x_i)(1-\theta)) \\
+                   &= \theta^{n_1} (1-\theta)^{n_0}
+\end{align*}
+Avec $n_0$ le nombre de fois où $x_i = 0$ et $n_1$ le nombre de fois où $x_i = 1$. Déterminons maintenant le $\theta$ maximisant cette fonction:
+\begin{align*}
+\frac{\partial P(\bf{D}_n|\theta)}{\partial \theta} 
+&= n_1 \theta^{n_1-1} (1-\theta)^{n_0} - n_1\theta^{n_1} (1-\theta)^{n_0-1} \\
+&= \theta^{n_1-1} (1-\theta)^{n_0-1} (n_1 (1-\theta) - n_0 \theta) \\
+&= \theta^{n_1-1} (1-\theta)^{n_0-1} (n_1 - \theta (n_1 + n_0))
+\end{align*}
+La valeur de $\theta$ maximisant la fonction $P(\bf{D}_n|\theta)$ est donc:
+$$ \theta_{i,j} = \frac{n_1}{n_0+n_1} = \frac{\mbox{nombre d'occurrences de i suivies de j}}{\mbox{nombre d'occurrences de i}} $$
+\subsubsection{}
+\subsubsection{}
+\subsubsection{}
+\subsubsection{}
+\subsection{Algorithme MCMC}
+\subsubsection{}
+\subsubsection{}
+\section{Deuxième partie : décryptage d’une séquence codée}
+\subsubsection{}
+\subsubsection{}
+\subsubsection{}
+\subsubsection{}
+\subsubsection{}
+\end{document}
