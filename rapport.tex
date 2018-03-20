@@ -27,7 +27,7 @@
 \usepackage[top=3cm, bottom=3cm, left=3cm, right=3cm]{geometry}
 \pagestyle{fancy}
 \addto\captionsfrench{\def\tablename{Tableau}}
-\lhead{Stegen Thomas s...... \quad  Adrien Minne s154340 \quad  Delaunoy Arnaud s153059}
+\lhead{Stegen Thomas s154315 \quad  Adrien Minne s154340 \quad  Delaunoy Arnaud s153059}
 \hypersetup{                    % parametrage des hyperliens
     colorlinks=true,                % colorise les liens
     breaklinks=true,                % permet les retours à la ligne pour les liens trop longs
@@ -38,7 +38,7 @@
 \definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
 \definecolor{mylilas}{RGB}{170,55,241}
 \title{Processus stochastiques: cryptanalyse}
-\author{Stegen Thomas s...... \\ Adrien Minne s154340 \\ Delaunoy Arnaud s153059}
+\author{Stegen Thomas s154315 \\ Adrien Minne s154340 \\ Delaunoy Arnaud s153059}
 \date{}
 \renewcommand\thesection{\arabic{section}}
 \renewcommand\thesubsection{\arabic{section}.\arabic{subsection}}
@@ -124,6 +124,16 @@ $$ \theta_{i,j} = \frac{n_1}{n_0+n_1} = \frac{\mbox{nombre d'occurrences de i su
 \subsubsection{}
 \subsection{Algorithme MCMC}
 \subsubsection{}
+Pour prouver que $\pi_0$ est une distribution stationnaire de la chaine de Markov, il suffit de prouver que $\pi_0=\pi_0 *Q$. 
+On sait que les équations de balances détaillées $\pi_0(i)Q_{i,j} = \pi_0(j)Q_{j,i}$ sont satisfaites.
+Passant en notation indicielle, on doit donc montrer que :
+\begin{align*}
+\pi_0(i) &= \sum^{N}_{k=0} \pi_0(k)*Q_{k,i} \\
+& = \sum^{N}_{k=0} \pi_0(i)*Q_{i,k} \\
+& = \pi_0(i) \sum^{N}_{k=0} \pi_0(i) Q_{i,k} \\
+& = \pi_0(i)
+\end{align*}
+Cette distribution stationnaire est unique si la matrice de transition Q est irréductible.
 \subsubsection{}
 \section{Deuxième partie : décryptage d’une séquence codée}
 \subsubsection{}
