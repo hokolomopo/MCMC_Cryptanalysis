@@ -1,7 +1,6 @@
 %q est la fonction de probabilité conditionnelle
-%ligne = la condition, colonne = l'élément sur lequel la probabilité porte
-%start_state est un nombre allant de 1 à 40
-%length est la taille de la chaine de markov à créer
+%start_state est la permutation initiale
+%length est la longueur de la chaine
 
 function result = Metro_Hast (q, start_state, length)
 current_state = start_state;
