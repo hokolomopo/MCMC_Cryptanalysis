@@ -9,12 +9,13 @@ result = zeros(1, length);
 result(1) = start_state;
 
 D = fileread('D.txt');
+pi_0 = load('pinit.mat');
 load Q;
-p = genp();
+p = genp(D, Q, pi_0);
 
 for i = 2:length
     y = random_number(q(current_state, :));
-    tmp_alpha = q(y, current_state)/q(current_state, y);
+    tmp_alpha = (p(y)*q(y, current_state))/(p(current_state)*q(current_state, y));
     alpha = min([1 tmp_alpha]);
     u = rand();
     if (u < alpha)
