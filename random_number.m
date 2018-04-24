@@ -10,7 +10,7 @@ for i = 1:siz(2)
     if (x < curr)
         rnd = i;
         break;
-end 
+    end 
 end
 
 end
