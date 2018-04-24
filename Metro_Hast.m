@@ -14,13 +14,14 @@ pi_0 = load('pinit.mat');
 pi_0 = pi_0.pinit;
 load Q;
 
-
 for i = 2:length
     y = random_flip(current_state);
-    tmp_alpha = (decode_prob(D_int, y, Q, pi_0))/(decode_prob(D_int, current_state, Q, pi_0));
+    [lol, log_p_x] = decode_prob(D_int, current_state, Q, pi_0);
+    [~, log_p_y] = decode_prob(D_int, y, Q, pi_0);
+    log_tmp_alpha = log_p_y - log_p_x;
+    tmp_alpha = exp(log_tmp_alpha);
     alpha = min([1 tmp_alpha]);
-    u = rand();
-    if (u < alpha)
+    if (rand() < alpha || ISNAN(alpha))
         current_state = y;
     end
     result(i, :) = current_state;
