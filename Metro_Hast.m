@@ -2,19 +2,22 @@
 %start_state est la permutation initiale
 %length est la longueur de la chaine
 
-function result = Metro_Hast (q, start_state, length)
+function result = Metro_Hast (start_state, length)
 current_state = start_state;
-result = zeros(1, length);
-result(1) = start_state;
+result = zeros(length, size(start_state, 2));
+result(1, :) = start_state;
 
 D = fileread('D.txt');
+D_int = arrayfun(@(x) symbol_to_int(x), D);
+
 pi_0 = load('pinit.mat');
+pi_0 = pi_0.pinit;
 load Q;
-p = genp(D, Q, pi_0);
+p = genp(D_int, Q, pi_0);
 
 for i = 2:length
     y = random_number(q(current_state, :));
-    tmp_alpha = (p(y)*q(y, current_state))/(p(current_state)*q(current_state, y));
+    tmp_alpha = (p(y))/(p(current_state));
     alpha = min([1 tmp_alpha]);
     u = rand();
     if (u < alpha)

@@ -1,6 +1,6 @@
 function test_metro
 
-load('Q.mat');
-result = Metro_Hast(Q, 1, 50)
+start_state = 1:40;
+Metro_Hast(start_state, 5)
 
 end

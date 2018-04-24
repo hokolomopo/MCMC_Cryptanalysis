@@ -1,9 +1,0 @@
-function symbol_to_int(symbol)
-symb = 'abcdefghijklmnopqrstuvwxyz,.''"-!?:;()[] ';
-size_symb = size(symb);
-for i = 1:size_symb(2)
-    if(symbol = symb(i))
-        return 
-    end
-end
-end
