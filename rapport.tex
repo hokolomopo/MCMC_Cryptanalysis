@@ -135,6 +135,36 @@ Passant en notation indicielle, on doit donc montrer que :
 \end{align*}
 Cette distribution stationnaire est unique si la matrice de transition Q est irréductible.
 \subsubsection{}
+\underline{\bf{mettre la référence du pdf.}}\\
+Étudions d'abord la probabilité de transition.\\
+La probabilité d'obtenir un élément $x_j$ sachant que l'élément précédent de la chaîne de Markov est $x_i$ est pour $i \neq j$ la probabilité que cet élément soit généré selon la loi q et accepté.
+$$P(x_j | x_i) = \alpha(x_j, x_i) q(x_j| x_i)$$
+avec
+\begin{align*}
+\alpha(x_j, x_i) 
+&= min \left\{1, \frac{f(x_j)}{f(x_i)} \frac{q(x_i|x_j)}{q(x_j|x_i)}\right\}\\
+&= min \left\{1, \frac{cP_X(x_j)}{cP_X(x_i)} \frac{q(x_i|x_j)}{q(x_j|x_i)}\right\}
+\end{align*}
+La probabilité d'obtenir à nouveau l'élément $x_i$ sachant que l'élément précédent de la chaîne de Markov est également $x_i$ est la somme de la probabilité que l'élément $x_i$ soit généré selon la loi q et accepté et de la probabilité que tout autre élément soit généré et refusé.
+$$P(x_i | x_i) = \alpha(x_i, x_i) q(x_i|x_i) + \sum_k (1-\alpha(x_k, x_i)) q(x_k |x_i)$$
+
+Dans le cas où l'élément généré est différent du précédent, on a:
+\begin{align*}
+P(x_j | x_i) \pi_0(x_i)
+&= \alpha(x_j, x_i) q(x_j| x_i) \pi_0(x_i) \\
+&= min \left\{1, \frac{cP_X(x_j)}{cP_X(x_i)} \frac{q(x_i|x_j)}{q(x_j|x_i)}\right\} q(x_j| x_i) \pi_0(x_i) \\
+&= \frac{\pi_0(x_i)}{cP_X(x_i)} min \left\{cP_X(x_i) q(x_j|x_i), cP_X(x_j) q(x_i|x_j)\right\} \\
+&\text{en posant } x_i \leftarrow x_j \text{ et } x_j \leftarrow x_i \\
+&= \frac{\pi_0(x_j)}{cP_X(x_j)} min \left\{cP_X(x_j) q(x_i|x_j), cP_X(x_i) q(x_j|x_i)\right\} \\
+&= min \left\{1, \frac{cP_X(x_i)}{cP_X(x_j)} \frac{q(x_j|x_i)}{q(x_i|x_j)}\right\} q(x_i| x_j) \pi_0(x_j)\\
+&= \alpha(x_i, x_j) q(x_i| x_j) \pi_0(x_j) \\
+&= P(x_i | x_j) \pi_0(x_j)
+\end{align*} 
+
+Dans le cas où l'élément généré est le même que le précédent, $x_i$ étant égal à $x_j$ il est évident que 
+$$P(x_i | x_j) \pi_0(x_j) = P(x_j | x_i) \pi_0(x_i)$$
+car 
+$$P(x_i | x_i) \pi_0(x_i) = P(x_i | x_i) \pi_0(x_i)$$
 \section{Deuxième partie : décryptage d’une séquence codée}
 \subsubsection{}
 \subsubsection{}
