@@ -2,7 +2,7 @@
 %start_state est la permutation initiale
 %length est la longueur de la chaine
 
-function [nbIterations, result] = Metro_Hast (start_state, convergeance, limitIterations)
+function [nbIterations, result] = Metro_Hast (start_state, q, convergeance, limitIterations)
 current_state = start_state;
 nbIterations = 1;
 consecutiveResult = 1;
@@ -18,7 +18,7 @@ Q(Q==0) = 1e-10;
 
 while consecutiveResult < convergeance && nbIterations < limitIterations
     nbIterations = nbIterations + 1;
-    y = random_flip(current_state);
+    y = feval(q, current_state);
     [~, log_p_x] = decode_prob(D_int, current_state, Q, pi_0);
     
     currents(nbIterations) = log_p_x;

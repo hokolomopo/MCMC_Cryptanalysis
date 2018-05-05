@@ -1,7 +1,7 @@
 function test_metro
 
 start_state = 1:40;
-[nbIterations, mar_chaine] = Metro_Hast(start_state, 120, 20000);
+[nbIterations, mar_chaine] = Metro_Hast(start_state, 'random_flip', 120, 20000);
 
 result = mar_chaine(end, :);
 
