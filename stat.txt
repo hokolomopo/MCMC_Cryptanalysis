@@ -1,27 +1,125 @@
 Convergeance = 10 
 fonction = random_flip 
-Moyenne iterations = 8.350000e+01 
+Moyenne iterations = 8.450000e+01 
 pourcentage de convergeance =  100 
 pourcentage de correct avec convergeance =  0 
 Always converge 
 pourcentage de correct =  0 
 fonction = random_flip_4 
-Moyenne iterations = 4.845000e+01 
+Moyenne iterations = 4.410000e+01 
 pourcentage de convergeance =  100 
 pourcentage de correct avec convergeance =  0 
 Always converge 
 pourcentage de correct =  0 
 fonction = random_flip_close 
-Moyenne iterations = 5.170000e+01 
+Moyenne iterations = 5.465000e+01 
 pourcentage de convergeance =  100 
 pourcentage de correct avec convergeance =  0 
 Always converge 
 pourcentage de correct =  0 
 fonction = random_permut 
-Moyenne iterations = 1.920000e+01 
+Moyenne iterations = 1.705000e+01 
 pourcentage de convergeance =  100 
 pourcentage de correct avec convergeance =  0 
 Always converge 
 pourcentage de correct =  0 
 Convergeance = 50 
 fonction = random_flip 
+Moyenne iterations = 1.100250e+03 
+pourcentage de convergeance =  100 
+pourcentage de correct avec convergeance =  0 
+Always converge 
+pourcentage de correct =  0 
+fonction = random_flip_4 
+Moyenne iterations = 4.135000e+02 
+pourcentage de convergeance =  100 
+pourcentage de correct avec convergeance =  0 
+Always converge 
+pourcentage de correct =  0 
+fonction = random_flip_close 
+Moyenne iterations = 1495 
+pourcentage de convergeance =  100 
+pourcentage de correct avec convergeance =  0 
+Always converge 
+pourcentage de correct =  0 
+fonction = random_permut 
+Moyenne iterations = 9.210000e+01 
+pourcentage de convergeance =  100 
+pourcentage de correct avec convergeance =  0 
+Always converge 
+pourcentage de correct =  0 
+Convergeance = 100 
+fonction = random_flip 
+Moyenne iterations = 9.058389e+03 
+pourcentage de convergeance =  90 
+pourcentage de correct avec convergeance =  5.555556e+01 
+pourcentage de correct sans convergeance =  0 
+pourcentage de correct =  50 
+fonction = random_flip_4 
+Moyenne iterations = 8.369500e+02 
+pourcentage de convergeance =  100 
+pourcentage de correct avec convergeance =  0 
+Always converge 
+pourcentage de correct =  0 
+fonction = random_flip_close 
+Moyenne iterations = 6.954143e+03 
+pourcentage de convergeance =  35 
+pourcentage de correct avec convergeance =  0 
+pourcentage de correct sans convergeance =  0 
+pourcentage de correct =  0 
+fonction = random_permut 
+Moyenne iterations = 1.951000e+02 
+pourcentage de convergeance =  100 
+pourcentage de correct avec convergeance =  0 
+Always converge 
+pourcentage de correct =  0 
+Convergeance = 200 
+fonction = random_flip 
+Never converge 
+pourcentage de convergeance =  0 
+Never converge 
+pourcentage de correct sans convergeance =  10 
+pourcentage de correct =  10 
+fonction = random_flip_4 
+Moyenne iterations = 1.907450e+03 
+pourcentage de convergeance =  100 
+pourcentage de correct avec convergeance =  0 
+Always converge 
+pourcentage de correct =  0 
+fonction = random_flip_close 
+Never converge 
+pourcentage de convergeance =  0 
+Never converge 
+pourcentage de correct sans convergeance =  0 
+pourcentage de correct =  0 
+fonction = random_permut 
+Moyenne iterations = 3.543000e+02 
+pourcentage de convergeance =  100 
+pourcentage de correct avec convergeance =  0 
+Always converge 
+pourcentage de correct =  0 
+Convergeance = 500 
+fonction = random_flip 
+Never converge 
+pourcentage de convergeance =  0 
+Never converge 
+pourcentage de correct sans convergeance =  10 
+pourcentage de correct =  10 
+fonction = random_flip_4 
+Moyenne iterations = 7.247100e+03 
+pourcentage de convergeance =  100 
+pourcentage de correct avec convergeance =  5 
+Always converge 
+pourcentage de correct =  5 
+fonction = random_flip_close 
+Never converge 
+pourcentage de convergeance =  0 
+Never converge 
+pourcentage de correct sans convergeance =  0 
+pourcentage de correct =  0 
+fonction = random_permut 
+Moyenne iterations = 8.474000e+02 
+pourcentage de convergeance =  100 
+pourcentage de correct avec convergeance =  0 
+Always converge 
+pourcentage de correct =  0 
