@@ -17,11 +17,6 @@ while consecutiveResult < convergeance && nbIterations < limitIterations
     y = feval(q, current_state);
     [~, log_p_x] = decode_prob(sequence, current_state, Q, pi_0);
     
-    if mod(nbIterations, 1000) == 0
-        nbIterations
-    end
-    currents(nbIterations) = log_p_x;
-
     [~, log_p_y] = decode_prob(sequence, y, Q, pi_0);
     log_tmp_alpha = log_p_y - log_p_x;
     tmp_alpha = exp(log_tmp_alpha);
@@ -36,7 +31,4 @@ while consecutiveResult < convergeance && nbIterations < limitIterations
 
     result(nbIterations, :) = current_state;
 end
-
-plot((2:nbIterations), currents(2:nbIterations));
-
 end

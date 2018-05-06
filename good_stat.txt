@@ -1,0 +1,125 @@
+Convergeance = 10 
+fonction = random_flip 
+Moyenne iterations = 8.115000e+01 
+pourcentage de convergeance =  100 
+pourcentage de correct avec convergeance =  0 
+Always converge 
+pourcentage de correct =  0 
+fonction = random_flip_4 
+Moyenne iterations = 4.990000e+01 
+pourcentage de convergeance =  100 
+pourcentage de correct avec convergeance =  0 
+Always converge 
+pourcentage de correct =  0 
+fonction = random_flip_close 
+Moyenne iterations = 4.925000e+01 
+pourcentage de convergeance =  100 
+pourcentage de correct avec convergeance =  0 
+Always converge 
+pourcentage de correct =  0 
+fonction = random_permut 
+Moyenne iterations = 1.725000e+01 
+pourcentage de convergeance =  100 
+pourcentage de correct avec convergeance =  0 
+Always converge 
+pourcentage de correct =  0 
+Convergeance = 50 
+fonction = random_flip 
+Moyenne iterations = 1.197900e+03 
+pourcentage de convergeance =  100 
+pourcentage de correct avec convergeance =  0 
+Always converge 
+pourcentage de correct =  0 
+fonction = random_flip_4 
+Moyenne iterations = 3.351000e+02 
+pourcentage de convergeance =  100 
+pourcentage de correct avec convergeance =  0 
+Always converge 
+pourcentage de correct =  0 
+fonction = random_flip_close 
+Moyenne iterations = 1.567211e+03 
+pourcentage de convergeance =  95 
+pourcentage de correct avec convergeance =  0 
+pourcentage de correct sans convergeance =  0 
+pourcentage de correct =  0 
+fonction = random_permut 
+Moyenne iterations = 99 
+pourcentage de convergeance =  100 
+pourcentage de correct avec convergeance =  0 
+Always converge 
+pourcentage de correct =  0 
+Convergeance = 100 
+fonction = random_flip 
+Moyenne iterations = 7.899500e+03 
+pourcentage de convergeance =  90 
+pourcentage de correct avec convergeance =  0 
+pourcentage de correct sans convergeance =  0 
+pourcentage de correct =  0 
+fonction = random_flip_4 
+Moyenne iterations = 8.747000e+02 
+pourcentage de convergeance =  100 
+pourcentage de correct avec convergeance =  0 
+Always converge 
+pourcentage de correct =  0 
+fonction = random_flip_close 
+Moyenne iterations = 6.113750e+03 
+pourcentage de convergeance =  60 
+pourcentage de correct avec convergeance =  0 
+pourcentage de correct sans convergeance =  0 
+pourcentage de correct =  0 
+fonction = random_permut 
+Moyenne iterations = 1.799500e+02 
+pourcentage de convergeance =  100 
+pourcentage de correct avec convergeance =  0 
+Always converge 
+pourcentage de correct =  0 
+Convergeance = 200 
+fonction = random_flip 
+Never converge 
+pourcentage de convergeance =  0 
+Never converge 
+pourcentage de correct sans convergeance =  20 
+pourcentage de correct =  20 
+fonction = random_flip_4 
+Moyenne iterations = 2.003600e+03 
+pourcentage de convergeance =  100 
+pourcentage de correct avec convergeance =  0 
+Always converge 
+pourcentage de correct =  0 
+fonction = random_flip_close 
+Moyenne iterations = 10472 
+pourcentage de convergeance =  5 
+pourcentage de correct avec convergeance =  0 
+pourcentage de correct sans convergeance =  0 
+pourcentage de correct =  0 
+fonction = random_permut 
+Moyenne iterations = 3.961500e+02 
+pourcentage de convergeance =  100 
+pourcentage de correct avec convergeance =  0 
+Always converge 
+pourcentage de correct =  0 
+Convergeance = 500 
+fonction = random_flip 
+Never converge 
+pourcentage de convergeance =  0 
+Never converge 
+pourcentage de correct sans convergeance =  20 
+pourcentage de correct =  20 
+fonction = random_flip_4 
+Moyenne iterations = 9.885737e+03 
+pourcentage de convergeance =  95 
+pourcentage de correct avec convergeance =  0 
+pourcentage de correct sans convergeance =  0 
+pourcentage de correct =  0 
+fonction = random_flip_close 
+Never converge 
+pourcentage de convergeance =  0 
+Never converge 
+pourcentage de correct sans convergeance =  0 
+pourcentage de correct =  0 
+fonction = random_permut 
+Moyenne iterations = 8.315500e+02 
+pourcentage de convergeance =  100 
+pourcentage de correct avec convergeance =  0 
+Always converge 
+pourcentage de correct =  0 
