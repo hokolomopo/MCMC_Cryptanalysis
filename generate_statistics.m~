@@ -15,7 +15,7 @@ start_state = 1:40;
 limitConvergeance = 20000;
 nbLoop = 20;
 tabConvergeance = [10 50 100 200 500];
-tabFunction = [string('random_flip'), string('random_flip_4'), string('random_flip_close'), string('random_permut')];
+tabFunction = ['random_flip', 'random_flip_4', 'random_flip_close', 'random_permut"];
 fileID = fopen('stat.txt', 'w');
 
 for convergeance = tabConvergeance
@@ -38,7 +38,7 @@ for convergeance = tabConvergeance
             if (nbIterations < limitConvergeance)
                 nbIter = nbIter + nbIterations;
                 nbConverge = nbConverge + 1;
-                if(strcmp(seq(1:85), correctSeq(1:85)))
+                if(strcmp(seq, correctSeq))
                     nbDecodeConv = nbDecodeConv + 1;
                 end
             else

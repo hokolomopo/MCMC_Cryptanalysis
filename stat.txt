@@ -1,0 +1,27 @@
+Convergeance = 10 
+fonction = random_flip 
+Moyenne iterations = 8.350000e+01 
+pourcentage de convergeance =  100 
+pourcentage de correct avec convergeance =  0 
+Always converge 
+pourcentage de correct =  0 
+fonction = random_flip_4 
+Moyenne iterations = 4.845000e+01 
+pourcentage de convergeance =  100 
+pourcentage de correct avec convergeance =  0 
+Always converge 
+pourcentage de correct =  0 
+fonction = random_flip_close 
+Moyenne iterations = 5.170000e+01 
+pourcentage de convergeance =  100 
+pourcentage de correct avec convergeance =  0 
+Always converge 
+pourcentage de correct =  0 
+fonction = random_permut 
+Moyenne iterations = 1.920000e+01 
+pourcentage de convergeance =  100 
+pourcentage de correct avec convergeance =  0 
+Always converge 
+pourcentage de correct =  0 
+Convergeance = 50 
+fonction = random_flip 
