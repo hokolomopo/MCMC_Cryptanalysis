@@ -1,74 +1,74 @@
 Convergeance = 10 
 fonction = random_flip 
-Moyenne iterations = 8.450000e+01 
+Moyenne iterations = 1.005500e+02 
 pourcentage de convergeance =  100 
 pourcentage de correct avec convergeance =  0 
 Always converge 
 pourcentage de correct =  0 
 fonction = random_flip_4 
-Moyenne iterations = 4.410000e+01 
+Moyenne iterations = 4.545000e+01 
 pourcentage de convergeance =  100 
 pourcentage de correct avec convergeance =  0 
 Always converge 
 pourcentage de correct =  0 
 fonction = random_flip_close 
-Moyenne iterations = 5.465000e+01 
+Moyenne iterations = 5.915000e+01 
 pourcentage de convergeance =  100 
 pourcentage de correct avec convergeance =  0 
 Always converge 
 pourcentage de correct =  0 
 fonction = random_permut 
-Moyenne iterations = 1.705000e+01 
+Moyenne iterations = 1.575000e+01 
 pourcentage de convergeance =  100 
 pourcentage de correct avec convergeance =  0 
 Always converge 
 pourcentage de correct =  0 
 Convergeance = 50 
 fonction = random_flip 
-Moyenne iterations = 1.100250e+03 
+Moyenne iterations = 1.272950e+03 
 pourcentage de convergeance =  100 
 pourcentage de correct avec convergeance =  0 
 Always converge 
 pourcentage de correct =  0 
 fonction = random_flip_4 
-Moyenne iterations = 4.135000e+02 
+Moyenne iterations = 3.440500e+02 
 pourcentage de convergeance =  100 
 pourcentage de correct avec convergeance =  0 
 Always converge 
 pourcentage de correct =  0 
 fonction = random_flip_close 
-Moyenne iterations = 1495 
+Moyenne iterations = 2.410700e+03 
 pourcentage de convergeance =  100 
 pourcentage de correct avec convergeance =  0 
 Always converge 
 pourcentage de correct =  0 
 fonction = random_permut 
-Moyenne iterations = 9.210000e+01 
+Moyenne iterations = 7.965000e+01 
 pourcentage de convergeance =  100 
 pourcentage de correct avec convergeance =  0 
 Always converge 
 pourcentage de correct =  0 
 Convergeance = 100 
 fonction = random_flip 
-Moyenne iterations = 9.058389e+03 
+Moyenne iterations = 8.822167e+03 
 pourcentage de convergeance =  90 
-pourcentage de correct avec convergeance =  5.555556e+01 
-pourcentage de correct sans convergeance =  0 
-pourcentage de correct =  50 
+pourcentage de correct avec convergeance =  2.777778e+01 
+pourcentage de correct sans convergeance =  50 
+pourcentage de correct =  30 
 fonction = random_flip_4 
-Moyenne iterations = 8.369500e+02 
+Moyenne iterations = 9.283000e+02 
 pourcentage de convergeance =  100 
 pourcentage de correct avec convergeance =  0 
 Always converge 
 pourcentage de correct =  0 
 fonction = random_flip_close 
-Moyenne iterations = 6.954143e+03 
-pourcentage de convergeance =  35 
+Moyenne iterations = 4.505111e+03 
+pourcentage de convergeance =  45 
 pourcentage de correct avec convergeance =  0 
 pourcentage de correct sans convergeance =  0 
 pourcentage de correct =  0 
 fonction = random_permut 
-Moyenne iterations = 1.951000e+02 
+Moyenne iterations = 1.565000e+02 
 pourcentage de convergeance =  100 
 pourcentage de correct avec convergeance =  0 
 Always converge 
@@ -78,22 +78,22 @@ fonction = random_flip
 Never converge 
 pourcentage de convergeance =  0 
 Never converge 
-pourcentage de correct sans convergeance =  10 
-pourcentage de correct =  10 
+pourcentage de correct sans convergeance =  40 
+pourcentage de correct =  40 
 fonction = random_flip_4 
-Moyenne iterations = 1.907450e+03 
+Moyenne iterations = 1.951900e+03 
 pourcentage de convergeance =  100 
 pourcentage de correct avec convergeance =  0 
 Always converge 
 pourcentage de correct =  0 
 fonction = random_flip_close 
-Never converge 
-pourcentage de convergeance =  0 
-Never converge 
+Moyenne iterations = 9688 
+pourcentage de convergeance =  15 
+pourcentage de correct avec convergeance =  0 
 pourcentage de correct sans convergeance =  0 
 pourcentage de correct =  0 
 fonction = random_permut 
-Moyenne iterations = 3.543000e+02 
+Moyenne iterations = 3.845000e+02 
 pourcentage de convergeance =  100 
 pourcentage de correct avec convergeance =  0 
 Always converge 
@@ -103,14 +103,14 @@ fonction = random_flip
 Never converge 
 pourcentage de convergeance =  0 
 Never converge 
-pourcentage de correct sans convergeance =  10 
-pourcentage de correct =  10 
+pourcentage de correct sans convergeance =  50 
+pourcentage de correct =  50 
 fonction = random_flip_4 
-Moyenne iterations = 7.247100e+03 
+Moyenne iterations = 8.776750e+03 
 pourcentage de convergeance =  100 
-pourcentage de correct avec convergeance =  5 
+pourcentage de correct avec convergeance =  0 
 Always converge 
-pourcentage de correct =  5 
+pourcentage de correct =  0 
 fonction = random_flip_close 
 Never converge 
 pourcentage de convergeance =  0 
@@ -118,7 +118,7 @@ Never converge
 pourcentage de correct sans convergeance =  0 
 pourcentage de correct =  0 
 fonction = random_permut 
-Moyenne iterations = 8.474000e+02 
+Moyenne iterations = 8.981000e+02 
 pourcentage de convergeance =  100 
 pourcentage de correct avec convergeance =  0 
 Always converge 
