@@ -2,7 +2,7 @@
 %start_state est la permutation initiale
 %length est la longueur de la chaine
 
-function [nbIterations, result] = Metro_Hast (sequence, Q, pi_0, start_state, q, convergeance, limitIterations)
+function [nbIterations, result] = Metro_Hast_no_print (sequence, Q, pi_0, start_state, q, convergeance, limitIterations)
 current_state = start_state;
 nbIterations = 1;
 consecutiveResult = 1;

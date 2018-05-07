@@ -1,0 +1,15 @@
+function stat_variable_length
+
+load corruptedSeq;
+intCorruptedSeq = arrayfun(@(x) symbol_to_int(x), corruptedSeq);
+
+load Q;
+
+load testSeq;
+
+pi_0 = load('pinit.mat');
+pi_0 = pi_0.pinit;
+
+tabLength = [9 101 504 1373];
+
+end

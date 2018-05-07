@@ -1,0 +1,24 @@
+length = 	 
+Never converge 
+pourcentage de convergeance =  0 
+Never converge 
+pourcentage de correct sans convergeance =  0 
+pourcentage de correct =  0 
+length = e 
+Never converge 
+pourcentage de convergeance =  0 
+Never converge 
+pourcentage de correct sans convergeance =  0 
+pourcentage de correct =  0 
+length = Ǹ 
+Never converge 
+pourcentage de convergeance =  0 
+Never converge 
+pourcentage de correct sans convergeance =  0 
+pourcentage de correct =  0 
+length = ՝ 
+Never converge 
+pourcentage de convergeance =  0 
+Never converge 
+pourcentage de correct sans convergeance =  0 
+pourcentage de correct =  0 
