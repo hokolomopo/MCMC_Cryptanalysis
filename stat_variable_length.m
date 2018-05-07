@@ -17,7 +17,7 @@ start_state = 1:40;
 func = 'random_flip';
 limitConvergeance = 20000;
 convergeance = 200;
-nbLoop = 1;
+nbLoop = 20;
 
 fileID = fopen('stat_length.txt', 'w');
 

@@ -1,24 +1,24 @@
-length = 	 
+length = 9 
 Never converge 
 pourcentage de convergeance =  0 
 Never converge 
 pourcentage de correct sans convergeance =  0 
 pourcentage de correct =  0 
-length = e 
+length = 101 
 Never converge 
 pourcentage de convergeance =  0 
 Never converge 
 pourcentage de correct sans convergeance =  0 
 pourcentage de correct =  0 
-length = Ǹ 
+length = 504 
 Never converge 
 pourcentage de convergeance =  0 
 Never converge 
-pourcentage de correct sans convergeance =  0 
-pourcentage de correct =  0 
-length = ՝ 
+pourcentage de correct sans convergeance =  20 
+pourcentage de correct =  20 
+length = 1373 
 Never converge 
 pourcentage de convergeance =  0 
 Never converge 
-pourcentage de correct sans convergeance =  0 
-pourcentage de correct =  0 
+pourcentage de correct sans convergeance =  5 
+pourcentage de correct =  5 

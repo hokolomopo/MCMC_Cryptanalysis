@@ -37,7 +37,7 @@
     }
 \definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
 \definecolor{mylilas}{RGB}{170,55,241}
-\title{Processus stochastiques: cryptanalyse}
+\title{Processus stochastiques : cryptanalyse}
 \author{Stegen Thomas s154315 \\ Adrien Minne s154340 \\ Delaunoy Arnaud s153059}
 \date{}
 \renewcommand\thesection{\arabic{section}}
@@ -119,6 +119,41 @@ Avec $n_0$ le nombre de fois où $x_i = 0$ et $n_1$ le nombre de fois où $x_i =
 La valeur de $\theta$ maximisant la fonction $P(\bf{D}_n|\theta)$ est donc:
 $$ \theta_{i,j} = \frac{n_1}{n_0+n_1} = \frac{\mbox{nombre d'occurrences de i suivies de j}}{\mbox{nombre d'occurrences de i}} $$
 \subsubsection{}
+Cette question est résolue par la fonction \texttt{estimate\_prob}. La t-ième puissance de Q est simplement calculée avec l'opérateur exposant de matlab.\\
+Pour le calcul de $P(X_t = x)$, on calcule $\pi(t) = \pi(0)*Q^t$ avec $\pi(0) = (0.25\ 0.25\ 0.25\ 0.25)$ dans le cas ou la première lettre est choisie au hasard et $\pi(0) = (0\ 0\ 1\ 0)$ quand la première lettre est c. $P(X_t = x)$ est l'élément de $\pi(t)$ correspondant à x (le premier pour a, le deuxième pour b, ...).\\
+L'évolution de la probabilité est reprise sur les graphiques \ref{prob_a}, \ref{prob_b}, \ref{prob_c} et \ref{prob_d}. On constate qu'en t = 0, elle est uniquement dépendante de $\pi(0)$, ce qui est normal au vu de la définition de $\pi(0)$. Quand t augmente, la probabilité est de moins en moins dépendante de $\pi(0)$ et dépend donc de plus en plus de la matrice de transition. C'est en accord avec la théorie car quand le temps augmente, la distribution tend vers la distribution stationnaire si $Q^t$ converge vers une valeur limite pour $t \rightarrow +\infty$. C'est le cas ici car 
+$$Q^{1000} = Q^{1001} =
+\begin{bmatrix}
+0.3518 & 0.0754 & 0.2161 & 0.3568\\
+0.3518 & 0.0754 & 0.2161 & 0.3568\\
+0.3518 & 0.0754 & 0.2161 & 0.3568\\
+0.3518 & 0.0754 & 0.2161 & 0.3568
+\end{bmatrix}
+$$ 
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[height = 9cm]{prob_a.jpg}
+\caption{\label{prob_a}}
+\end{center}
+\end{figure}
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[height = 9cm]{prob_b.jpg}
+\caption{\label{prob_b}}
+\end{center}
+\end{figure}
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[height = 9cm]{prob_c.jpg}
+\caption{\label{prob_c}}
+\end{center}
+\end{figure}
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[height = 9cm]{prob_d.jpg}
+\caption{\label{prob_d}}
+\end{center}
+\end{figure}
 \subsubsection{}
 \subsubsection{}
 \subsubsection{}
@@ -167,7 +202,29 @@ car
 $$P(x_i | x_i) \pi_0(x_i) = P(x_i | x_i) \pi_0(x_i)$$
 \section{Deuxième partie : décryptage d’une séquence codée}
 \subsubsection{}
+Pour déterminer la cardinalité de l'ensemble $\Theta$, il suffit de calculer le nombre possibles de permutations des caractères disponibles. On considère la langue anglaise avec 40 caractèresle nombre de permutations possibles, on considère qu'on a 40 permutatations possibles pour la première lettre, 39 pour la deuxième, ... On a donc : 
+$$|\Theta| = 40 * 39 *38 * ... * 1!$$. 
 \subsubsection{}
+\paragraph{}
+Dans le modèle $\pi_0, Q$, on peut trouver la vraisemblance de la séquence $T'$ en mutlipliant les probabilité d'avoir la lettre $n$ de $T'$ en partant de la lettre $n-1$ de $T'$. Nos probabilités sont calculées comme suit : 
+
+\begin{itemize}
+\item $P(lettre 1 = T'(1))$ est simplement sa probabilité d'avoir cette lettre dans $\pi_{0}$.
+\item $P(lettre 2 = T'(2))$ : est la probabilité d'avoir cette lettre dans $\pi_{0}*Q$.
+\item $P(lettre 3 = T'(3))$ : est la probabilité d'avoir cette lettre dans $\pi_{0}*Q^{2}$.
+\item etc
+\end{itemize}
+
+La vraisemblance de la chaine $T'$ est donc, notant N la taille de la chaine $T'$ et $| \pi|_{T'(k)}$ la probabilité d'avoir la $k^{ième}$ lettre de $T'$ selon la distribution $\pi$ :
+$$P(T') = \prod_{k=0}^{N} |\pi_{0}*Q^{k}|_{T'(k)}$$
+
+\paragraph{}
+Pour trouver la vraisemblance de $D$, il faut d'abord calculer la matrice $Q_{\theta}$ exprimant notre matrice Q dans le cas  de la permutation $\theta$. Ensuite, la vraisemblance de $D$ se trouve de la même facon que celle de $T'$, à savoir : 
+$$P(D) = \prod_{k=0}^{N} |\pi_{0}*Q_{\theta}^{k}|_{D(k)}$$
+
+\subsubsection{}
+
+Si il n'a que 10 codes candidats possible qui ont la même probabilité, il est assez simple de retrouver le texte de base. Il suffit en effet de calculer la vraisemblance de notre texte avec chaque code $\theta$ suivant l'algorithme décrit au point 2.2, et puis simplmenet sélectionner le $\theta$ menan	t au texte ayant la plus grande vraisemblance.
 \subsubsection{}
 \subsubsection{}
 \subsubsection{}
