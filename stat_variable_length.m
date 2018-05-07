@@ -10,13 +10,13 @@ load testSeq;
 pi_0 = load('pinit.mat');
 pi_0 = pi_0.pinit;
 
-tabLength = [9 101 504 1373];
+tabLength = [10 100 500 750 1000 1300];
 
 start_state = 1:40;
 
 func = 'random_flip';
 limitConvergeance = 20000;
-convergeance = 200;
+convergeance = 100;
 nbLoop = 20;
 
 fileID = fopen('stat_length.txt', 'w');
@@ -33,16 +33,22 @@ for length = tabLength
         [nbIterations, mar_chaine] = Metro_Hast_no_print(intCorruptedSeq(1:length), Q, pi_0, start_state, func, convergeance, limitConvergeance);
         result = mar_chaine(end, :);
         decoded = decode(intCorruptedSeq(1:length), result);
-        seq = arrayfun(@(x) int_to_symbol(x), decoded);
+        seq = arrayfun(@(x) int_to_symbol(x), decoded)
+        
+        if(length < 18)
+            testLength = length
+        else
+            testLength = 18;
+        end
         
         if (nbIterations < limitConvergeance)
             nbIter = nbIter + nbIterations;
             nbConverge = nbConverge + 1;
-            if(strcmp(seq, testSeq(1:length)))
+            if(strcmp(seq(1:testLength), testSeq(1:testLength)))
                 nbDecodeConv = nbDecodeConv + 1;
             end
         else
-            if(strcmp(seq, testSeq(1:length)))
+            if(strcmp(seq(1:testLength), testSeq(1:testLength)))
                 nbDecodeNotConv = nbDecodeNotConv + 1;
             end
         end

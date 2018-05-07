@@ -1,24 +1,12 @@
-length = 9 
+length = 750 
 Never converge 
 pourcentage de convergeance =  0 
 Never converge 
-pourcentage de correct sans convergeance =  0 
-pourcentage de correct =  0 
-length = 101 
-Never converge 
-pourcentage de convergeance =  0 
-Never converge 
-pourcentage de correct sans convergeance =  0 
-pourcentage de correct =  0 
-length = 504 
-Never converge 
-pourcentage de convergeance =  0 
-Never converge 
-pourcentage de correct sans convergeance =  20 
-pourcentage de correct =  20 
-length = 1373 
-Never converge 
-pourcentage de convergeance =  0 
-Never converge 
-pourcentage de correct sans convergeance =  5 
-pourcentage de correct =  5 
+pourcentage de correct sans convergeance =  60 
+pourcentage de correct =  60 
+length = 1000 
+Moyenne iterations = 8955 
+pourcentage de convergeance =  10 
+pourcentage de correct avec convergeance =  50 
+pourcentage de correct sans convergeance =  4.444444e+01 
+pourcentage de correct =  45 
