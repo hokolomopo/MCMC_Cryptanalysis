@@ -37,6 +37,10 @@ while consecutiveResult < convergeance && nbIterations < limitIterations
     result(nbIterations, :) = current_state;
 end
 
+figure
 plot((2:nbIterations), currents(2:nbIterations));
+title('Vraisemblance de la chaine courante');
+ylabel('Log(P)');
+xlabel('Iterations');
 
 end
