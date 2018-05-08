@@ -1,4 +1,8 @@
 function [prob_eq prob_c trans] = estimate_prob(t)
+%Compute the probability distribution at time t for
+%a uniform starting prob (prob_eq) and a chain starting by c (prob_c).
+%Also compute the transition matrix at time t (trans).
+%This function is for the question 1.1.2
 
 trans = transition_matrix;
 trans = trans^t;
