@@ -1,7 +1,11 @@
 function Q = transition_matrix
+%Compute the transtion matrix from the question 1
+
 load seq.mat
 A =zeros(1, 4);
 Q = zeros(4, 4);
+
+%Increment the elements of Q following the sequence 
 for i=1:size(seq, 2)-1
     n = 1;
     if(seq(i) == 'b')
@@ -23,7 +27,9 @@ for i=1:size(seq, 2)-1
    Q(n,m) = Q(n,m) +1;
 end
 
+%Transform the number of transitions into probabilities
 for i=1:4
    Q(i, :) =  Q(i, :)./A(i);
 end
+
 end

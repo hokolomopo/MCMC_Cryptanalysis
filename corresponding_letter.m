@@ -1,4 +1,5 @@
 function letter = corresponding_letter(x)
+%Convert [1,2,3,4] into [a,b,c,d]
 
 switch x
     case 1

@@ -1,4 +1,5 @@
 function decoded= decode(chain, key)
+%Decode a chain with the given key
 
 decoded = zeros(1, size(chain,2));
 
